@@ -1,0 +1,116 @@
+.menu-link{
+	display: block;
+	width: 50px;
+	height: 50px;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 1px 1px 10px rgba(0,0,0,.4);
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 9;
+}
+.menu-link span{
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    top: 50%;
+    margin-top: -1px;
+}
+.menu-link span:after{
+	transition: all 0.2s;
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    top: 50%;
+    margin-top: 4px;
+    content: ""
+}
+.menu-link span:before{
+	transition: all 0.2s;
+    display: block;
+    width: 18px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 50%;
+    margin-left: -9px;
+    top: 50%;
+    margin-top: -6px;
+    content: "";
+}
+.menu-link_active span{
+	background-color: transparent;
+}
+.menu-link_active span:before{
+	transform: rotate(135deg);
+	margin-top: 0;
+}
+.menu-link_active span:after{
+	transform: rotate(-135deg);
+	margin-top: 0;
+}
+.menu{
+	background-color: purple;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: -100vw;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.menu ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.menu ul li{
+	width: 100vw;
+}
+.menu ul a{
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	line-height: 4;
+	letter-spacing: 5px;
+	font-weight: 100;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+	 width: 100%;
+}
+.menu ul a:hover{
+	background-color: rgba(255,255,255,.4);
+	display: block;
+    text-decoration: none;
+    width: 100%;
+   	line-height: 4;
+	letter-spacing: 5px;
+	font-weight: 100;
+}
+
+.menu_active{
+    left: 0;
+}
+section{
+	padding: 20px 100px;
+	height: 100vh;
+
+}
